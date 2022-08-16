@@ -8,13 +8,12 @@ using namespace std;
 class Apartamento : public Imovel {
 private:
     //Atributos
-    double fracaoIdeal;
-    int andar;
-    bool cobertura;
+    double precoCobertura = 20000;
+    int andar, cobertura;
 
 public:
     //Construtor
-    Apartamento(int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas, double _valor, string _endereco, double _fracaoIdeal, int _andar, bool _cobertura);
+    Apartamento(string _endereco, int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas, double _valorMetro, int andar, int cobertura);
 
     //Metodos
     double valorApartamento();

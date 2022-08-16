@@ -1,5 +1,5 @@
-#ifndef PROJETO_POO_CASA_H
-#define PROJETO_POO_CASA_H
+#ifndef CASA_H
+#define CASA_H
 #include "Imovel.h"
 #include <string>
 
@@ -14,8 +14,7 @@ private:
 public:
     //Construtor
     Casa(string _endereco, int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas, double _valorMetro, int _tamTerreno);
-
-    //Metodos
+    //métodos
     void verificaTerreno(int _areaConstruida, int _tamTerreno);
     double valorCasa();
 };
