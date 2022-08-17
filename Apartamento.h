@@ -13,8 +13,7 @@ private:
 
 public:
     //Construtor
-    Apartamento(string _endereco, int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas, double _valorMetro, int andar, int cobertura);
-
+    Apartamento(string _endereco, int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas, int andar, int cobertura);
     //Metodos
     double valorApartamento();
 };

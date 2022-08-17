@@ -5,11 +5,13 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <locale.h>
 using namespace std;
 
 Escritura::Escritura(){}
 
 void Escritura::conteudoEscritura(Comprador novoComprador, Imovel novoImovel, Financiamento novoFinanciamento) {
+	setlocale(LC_ALL, "Portuguese");
 	this->escritura.open("Escritura.txt", ios::out); 
 	this->escritura << "----------------------------ESCRITURA DE COMPRA E VENDA DE IMÓVEL----------------------------" << endl;
 	this->escritura << "O presente contrato tem por finalidade a comercialização do imóvel a seguir, de propriedade da Maxxi Corretora.\n" << endl;

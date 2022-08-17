@@ -12,6 +12,7 @@ protected:
     double valorBanheiro = 8000;
     double valorVaga = 1255;
     double precoImovel;
+    double valorMetro = 1652; //valor do m²
     string endereco;
 
 public:
@@ -20,17 +21,11 @@ public:
     int qntQuartos;
     int qntBanheiros;
     int qntVagas;
-    double valorMetro; //valor do m²
 
     //Construtor
- 
-    Imovel(string _endereco, int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas, double _valorMetro);
+    Imovel(string _endereco, int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas);
 
     //Metodos
-    //(Set-Get (valor do Metro²))
-    void setValorMetro(double _valorMetro);
-    double getValorMetro();
-
     //(Set-Get (Endereço))
     void setEndereco(string _endereco);
     string getEndereco();

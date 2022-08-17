@@ -5,21 +5,12 @@
 using namespace std;
 
 //Construtor
-Casa::Casa(std::string _endereco, int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas, double _valorMetro, int _tamTerreno) : Imovel(_endereco, _areaConstruida, _qntQuartos, _qntBanheiros, _qntVagas, _valorMetro) {
+Casa::Casa(std::string _endereco, int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas, int _tamTerreno) : Imovel(_endereco, _areaConstruida, _qntQuartos, _qntBanheiros, _qntVagas) {
     this->tamTerreno = _tamTerreno;
 }
 
-//Metodos
-void Casa::verificaTerreno(int _areaConstruida, int _tamTerreno) {
-    if (_tamTerreno < _areaConstruida) {
-        cout << "Operação Inválida!" << endl;
-    }
-}
 
 double Casa::valorCasa() {
-    double precoCasa = ((areaConstruida * valorMetro) + (qntQuartos * valorQuarto) + (qntBanheiros * valorBanheiro) + (qntVagas * valorVaga)) + (tamTerreno * precoTerreno);
+    double precoCasa = ((areaConstruida * valorMetro) + (qntQuartos * valorQuarto) + (qntBanheiros * valorBanheiro) + (qntVagas * valorVaga));
     return precoCasa;
 }
-
-
-// Corrigir valorCasa()
