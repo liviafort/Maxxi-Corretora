@@ -11,12 +11,12 @@ private:
 	string banco;
 	double valorEntrada;
 	int qantMeses;
-	double taxa;
+	double taxa = 0.15;
 
 
 public:
 	//construtor
-	Financiamento(string banco, double valorEntrada, int qantMeses, double taxa);
+	Financiamento(string banco, double valorEntrada, int qantMeses);
 
 	//métodos
 	void setBANCO(string banco);
@@ -25,10 +25,10 @@ public:
 	double getVALORENTRADA();
 	void setQANTMESES(int qantMeses);
 	int getQANTMESES();
-	void setTAXA(double taxa);
-	double getTAXA();
 	//caso funcional
-	void validacao();
+	double precoFinanciado;
+	void calculoFinanciamento(double valorImovel);
+	double getFinanciado();
 };
 #endif
 

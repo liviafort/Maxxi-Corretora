@@ -10,7 +10,7 @@ Apartamento::Apartamento(string _endereco, int _areaConstruida, int _qntQuartos,
 
 double Apartamento::valorApartamento() {
     double precoApartamento;
-    if (cobertura == true) {
+    if (cobertura == 1) {
         precoApartamento = ((areaConstruida * valorMetro) + (qntQuartos * valorQuarto) + (qntBanheiros * valorBanheiro) + (qntVagas * valorVaga)) + (this->andar * this->precoCobertura);
     }
     else {

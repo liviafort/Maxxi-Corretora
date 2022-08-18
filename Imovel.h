@@ -1,8 +1,8 @@
 #ifndef IMOVEL_H
 #define IMOVEL_H
 #include <string>
+#include "Financiamento.h"
 #include <iostream>
-
 using namespace std;
 
 class Imovel {
@@ -33,6 +33,9 @@ public:
     // Valor do Imovel
     void valorImovel(double valorDoImovel);
     double getValorImovel();
+
+    //criação do objeto financiamento
+    Financiamento criaObjetoFinanciamento(Imovel imovel);
 };
 
 #endif

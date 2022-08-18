@@ -16,8 +16,8 @@ void Escritura::conteudoEscritura(Comprador novoComprador, Imovel novoImovel, Fi
 	this->escritura << "----------------------------ESCRITURA DE COMPRA E VENDA DE IMÓVEL----------------------------" << endl;
 	this->escritura << "O presente contrato tem por finalidade a comercialização do imóvel a seguir, de propriedade da Maxxi Corretora.\n" << endl;
 	this->escritura << "Endereço do imóvel" << novoImovel.getEndereco() << endl;
-	this->escritura << "Número de Matrícula no Cartório de Registro de Imóveis : 1342" << endl;
-	this->escritura << "O preço certo e ajustado da venda ora acertada é de R$" << novoImovel.getValorImovel() << endl;
+	this->escritura << "O preço avaliado do imóvel é de R$" << novoImovel.getValorImovel() << endl;
+	this->escritura << "O valor final do imovel financiado: " << novoFinanciamento.getFinanciado() << endl;
 	this->escritura << "por conta do qual a Maxxi Corretora confessa e declara haver recebido do COMPRADOR o valor de R$" << novoFinanciamento.getVALORENTRADA() << endl;
 	this->escritura << "a título de sinal de negócio e princípio de pagamento, conforme recibo assinado pela Maxxi Corretora e que, na época do pagamento, foi entregue ao " << novoComprador.getNOME() << " e de cujo recebimento dão a mais ampla quitação." << endl;
 	this->escritura << "A posse do imóvel objeto deste contrato é transmitida pela Maxxi Corretora ao " << novoComprador.getNOME() << " neste ato, situação essa representada pela entrega das chaves do referido imóvel." << endl;

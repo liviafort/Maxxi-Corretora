@@ -3,11 +3,10 @@
 #include <string>
 using namespace std;
 
-Financiamento::Financiamento(string banco, double valorEntrada, int qantMeses, double taxa) {
+Financiamento::Financiamento(string banco, double valorEntrada, int qantMeses) {
 	this->banco = banco;
 	this->valorEntrada = valorEntrada;
 	this->qantMeses = qantMeses;
-	this->taxa = taxa;
 }
 
 void Financiamento::setBANCO(string banco) {
@@ -34,10 +33,10 @@ int Financiamento::getQANTMESES() {
 	return this->qantMeses;
 }
 
-void Financiamento::setTAXA(double taxa) {
-	this->taxa = taxa;
+void Financiamento::calculoFinanciamento(double valorImovel) {
+	this->precoFinanciado = (valorImovel + (valorImovel * this->taxa)) - this->valorEntrada;
 }
 
-double Financiamento::getTAXA() {
-	return this->taxa;
+double Financiamento::getFinanciado() {
+	return this->precoFinanciado;
 }
