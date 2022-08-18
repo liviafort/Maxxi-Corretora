@@ -69,7 +69,7 @@ int main() {
         getline(cin, rg);
         cout << "CPF: ";
         getline(cin, cpf);
-        cout << "-----As informações foram processadas-----" << endl;
+        cout << "-----As informações foram processadas-----\n" << endl;
         Comprador comprador1 = Comprador(nome, rg, cpf);
 
         //condições de criação de objeto
@@ -99,28 +99,40 @@ int main() {
             }
         }
         else {
-            int andar;
-            bool cobertura = true;
+            int andar, cobertura;
+            cout << "Digite o andar do prédio que deseja que seu imóvel esteja (número): ";
             cin >> andar;
+            cout << "Digite 1 se deseja cobertura no prédio ou 0 caso não queira: ";
             cin >> cobertura;
-            if (andar > 0) {
-                Apartamento apartamento1 = Apartamento(endereco, areaConstruida, qntQuartos, qntBanheiros, qntVagas, andar, cobertura);
-                Imovel imovel1 = Imovel(endereco, areaConstruida, qntQuartos, qntBanheiros, qntVagas);
-                imovel1.valorImovel(apartamento1.valorApartamento());
-                //criação do objeto financiamento
-                Financiamento financiamento1 = imovel1.criaObjetoFinanciamento(imovel1);
-                //criação da escritura;
-                Escritura escritura1 = Escritura();
-                escritura1.conteudoEscritura(comprador1, imovel1, financiamento1);
-
-            }
-            else {
-                escolhaVoltarInicio = retornoDeSaida(escolhaVoltarInicio);
-                if (escolhaVoltarInicio == 1) {
+            if (cobertura>1 || cobertura<0) {
+                cobertura = retornoDeSaida(cobertura);
+                if (cobertura == 1) {
                     continue;
                 }
                 else {
                     break;
+                }
+            }
+            else{
+                if (andar > 0) {
+                    Apartamento apartamento1 = Apartamento(endereco, areaConstruida, qntQuartos, qntBanheiros, qntVagas, andar, cobertura);
+                    Imovel imovel1 = Imovel(endereco, areaConstruida, qntQuartos, qntBanheiros, qntVagas);
+                    imovel1.valorImovel(apartamento1.valorApartamento());
+                    //criação do objeto financiamento
+                    Financiamento financiamento1 = imovel1.criaObjetoFinanciamento(imovel1);
+                    //criação da escritura;
+                    Escritura escritura1 = Escritura();
+                    escritura1.conteudoEscritura(comprador1, imovel1, financiamento1);
+                    break;
+                }
+                else {
+                    escolhaVoltarInicio = retornoDeSaida(escolhaVoltarInicio);
+                    if (escolhaVoltarInicio == 1) {
+                        continue;
+                    }
+                    else {
+                        break;
+                    }
                 }
             }
 

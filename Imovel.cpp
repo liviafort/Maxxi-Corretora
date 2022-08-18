@@ -33,7 +33,8 @@ Financiamento Imovel::criaObjetoFinanciamento(Imovel imovel) {
     string banco;
     double valorEntrada;
     int meses;
-    cout << "\n-----Digite as seguintes informações do imóvel para dar continuidade-----" << endl;
+    cout << "O valor total do imóvel é R$" << imovel.getValorImovel() << ". Efetue o pagamento.\n" << endl;
+    cout << "\n-----Digite as seguintes informações de pagamento para dar continuidade-----" << endl;
     cout << "Banco: ";
     cin.ignore();
     getline(cin, banco);

@@ -34,7 +34,7 @@ int Financiamento::getQANTMESES() {
 }
 
 void Financiamento::calculoFinanciamento(double valorImovel) {
-	this->precoFinanciado = (valorImovel + (valorImovel * this->taxa)) - this->valorEntrada;
+	this->precoFinanciado = (this->qantMeses * valorImovel * this->taxa) - this->valorEntrada;
 }
 
 double Financiamento::getFinanciado() {
