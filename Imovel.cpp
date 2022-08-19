@@ -3,7 +3,7 @@
 #include "Financiamento.h"
 using namespace std;
 
-// Construtor
+//construtor
 Imovel::Imovel(string _endereco, int _areaConstruida, int _qntQuartos, int _qntBanheiros, int _qntVagas) {
     this->areaConstruida = _areaConstruida;
     this->qntQuartos = _qntQuartos;
@@ -12,7 +12,6 @@ Imovel::Imovel(string _endereco, int _areaConstruida, int _qntQuartos, int _qntB
     this->endereco = _endereco;
 }
 
-// Set-Get(Endereco)
 void Imovel::setEndereco(string _endereco) {
     this->endereco = _endereco;
 }
@@ -29,6 +28,7 @@ double Imovel::getValorImovel() {
     return this->precoImovel;
 }
 
+//criando financiamento a partir de imovel
 Financiamento Imovel::criaObjetoFinanciamento(Imovel imovel) {
     string banco;
     double valorEntrada;

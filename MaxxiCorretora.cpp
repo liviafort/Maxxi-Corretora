@@ -9,7 +9,7 @@
 #include <locale.h>
 using namespace std;
 
-
+//função feita apenas por questões de repetição de print
 int retornoDeSaida(int escolhaVoltarInicio) {
     cout << "\n-----Escolha não encontrada, caso deseje começar de novo digite 1.-----" << endl;
     cin >> escolhaVoltarInicio;
@@ -81,7 +81,7 @@ int main() {
                 Casa casa1 = Casa(endereco, areaConstruida, qntQuartos, qntBanheiros, qntVagas, tamanhoTerreno);
                 Imovel imovel1 = Imovel(endereco, areaConstruida, qntQuartos, qntBanheiros, qntVagas);
                 imovel1.valorImovel(casa1.valorCasa());
-                //criação do objeto financiamento
+                //criação do objeto financiamento a partir de imovel
                 Financiamento financiamento1 = imovel1.criaObjetoFinanciamento(imovel1);
                 //criação da escritura;
                 Escritura escritura1 = Escritura();
